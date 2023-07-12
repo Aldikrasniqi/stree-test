@@ -6,7 +6,9 @@ function Home() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Perform any necessary logout actions
+    // Remove users from local storage
+    // localStorage.removeItem('userData');
+    // window.location.reload();
     navigate('/login');
   };
 
