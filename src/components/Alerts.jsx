@@ -1,15 +1,15 @@
-// function ErrorAlert({ messages }) {
-//   if (messages.length) {
-//     return (
-//       <div className="bg-red-500 text-white p-4">
-//         <h1>Alerts</h1>
-//         {messages.map((elem, index) => (
-//           <p key={index}>{elem}</p>
-//         ))}
-//       </div>
-//     );
-//   }
-//   return null;
-// }
+import React from 'react';
 
-// export default ErrorAlert;
+const ErrorAlert = ({ messages }) => {
+  return (
+    <div>
+      {messages.map((message, index) => (
+        <p key={index} className="text-red-500">
+          {message}
+        </p>
+      ))}
+    </div>
+  );
+};
+
+export default ErrorAlert;
