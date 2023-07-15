@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
 import Header from '../components/Header';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import ErrorAlert from '../components/Alerts';
+import { useContext } from 'react';
+import { UserContext } from '../Utils/userContext';
 
 function Logincomponent() {
+  const { setUserData } = useContext(UserContext);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -53,7 +55,12 @@ function Logincomponent() {
             console.log('Ju u loguat me sukses');
             Navigate('/');
           }
-
+          const userContext = {
+            email: user.email,
+            password: user.password,
+            isLogged: true,
+          };
+          setUserData(userContext);
           console.log(errors);
         };
 

@@ -49,6 +49,10 @@ function Registercomponent() {
       errors.push('Numri i telefonit duhet te jete se paku 9 shifror');
     }
 
+    if (password.length < 9) {
+      errors.push('Passwordi duhet te jete se paku 9 karaktere');
+    }
+
     if (password !== password2) {
       errors.push('Passwordat nuk perputhen');
     }

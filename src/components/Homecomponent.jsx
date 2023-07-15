@@ -1,12 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../Utils/userContext';
+
 function Homecomponent() {
   const navigate = useNavigate();
-
+  const { setUserData } = useContext(UserContext);
   const handleLogout = () => {
     // Remove users from local storage
     // localStorage.removeItem('userData');
     // window.location.reload();
+    // Clear user data and set isLogged to false
+    setUserData({
+      email: '',
+      password: '',
+      isLogged: false,
+    });
     navigate('/login');
   };
   return (
