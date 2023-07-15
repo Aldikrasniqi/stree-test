@@ -17,3 +17,14 @@ button {
   transform: translateY(-15px) scale(0.9);
   color: #555;
 }
+
+.indicator {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.indicator span {
+  width: 4.3rem;
+  height: 0.3rem;
+}

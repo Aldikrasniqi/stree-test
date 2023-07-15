@@ -114,11 +114,13 @@ function Registercomponent() {
   return (
     <div className="h-screen w-full flex justify-center items-center">
       <div className="max-w-sm">
-        <Link to="/login" onClick={handleImageClick}>
-          <img src={back} alt="Back" className="cursor-pointer" />
-        </Link>
-        <section className="form mt-28">
-          <h1 className="mb-20 font-bold text-3xl pl-5">Register to Stree</h1>
+        <section className="form mt-5">
+          <Link to="/login" onClick={handleImageClick}>
+            <img src={back} alt="Back" className="cursor-pointer" />
+          </Link>
+          <h1 className="mb-20 font-bold text-3xl pl-5 mt-3">
+            Register to Stree
+          </h1>
           <form onSubmit={onSubmit} className="p-5">
             <div className="relative mb-10 ">
               <label
@@ -246,7 +248,7 @@ function Registercomponent() {
               />
             </div>
 
-            <div className="flex justify-center mt-5">
+            <div className="flex justify-center mt-5 mb-3">
               <button
                 type="submit"
                 className={`w-96 h-12 rounded text-white flex items-center justify-center ${buttonColor}`}

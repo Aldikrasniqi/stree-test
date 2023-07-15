@@ -82,7 +82,7 @@ function Logincomponent() {
   };
 
   const buttonColor =
-    email !== '' || password !== '' ? 'bg-rose-500' : 'bg-gray-300 shadow-lg';
+    email !== '' && password !== '' ? 'bg-rose-500' : 'bg-gray-300 shadow-lg';
   return (
     <div>
       <div className="h-screen w-full flex justify-center items-center">
